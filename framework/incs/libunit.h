@@ -19,6 +19,7 @@
 # include <string.h>
 # include <sys/types.h>
 # include <sys/wait.h>
+# include <fcntl.h>
 
 // 📶 Signals transcriptor
 # define _SUCCESS 0
@@ -117,6 +118,7 @@ int		__init_get(t_pipe *std);
 void	__read_std(char *buff, t_pipe *std);
 void	__close_std(t_pipe *std);
 void	__start();
-
+void	__log_name(char *fun, char *name);
+void	__log_test(char *test, char *att, char* ret);
 
 #endif

@@ -21,6 +21,7 @@ LIB_NAME	= libunit.a
 FILES		= 00_strlen/00_launcher.c 00_strlen/01_test_OK.c 00_strlen/02_test_KO.c \
 			00_strlen/03_test_sigsev.c 00_strlen/04_test_bus_error.c \
 			00_strlen/ft_strlen.c \
+			00_strlen/ft_itoa.c\
 			main.c
 
 # Paths

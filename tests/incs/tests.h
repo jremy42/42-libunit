@@ -15,6 +15,8 @@
 
 # include <stdlib.h>
 # include <libunit.h>
+# include <stdio.h>
+# include <string.h>
 
 int	ft00_launcher(t_score *score);
 
@@ -23,5 +25,7 @@ int	__test_ko(void);
 int	__test_sigsev(void);
 int	__test_bus(void);
 int	ft_strlen(char *str);
+char	*ft_itoa(int n);
+
 
 #endif

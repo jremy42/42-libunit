@@ -12,16 +12,19 @@
 
 #include "libunit.h"
 
-static int	__test(int (*f)(void), t_utest *utest)
+static int	__test(int (*f)(void), t_utest *utest, char *fun, char *name)
 {
 	pid_t	pid;
 	int		status;
+	int		ret;
 
 	pid = fork();
 	if (pid == 0)
 	{
+		__log_name(fun, name);
+		ret = f();
 		__lstclear(utest);
-		exit(f());
+		exit(ret);
 	}
 	else
 	{
@@ -86,7 +89,7 @@ int	__launcher(t_utest *utest, t_score *score)
 	printf(BOLDWHITE" %s >\n"RESET,utest->fun);
 	while (utest != NULL)
 	{
-		ret_error = __test(utest->f, tmp);
+		ret_error = __test(utest->f, tmp, utest->fun, utest->name);
 		if (ret_error != 0)
 			cnt++;
 		test_cnt++;

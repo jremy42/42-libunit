@@ -17,5 +17,8 @@ int	__test_ko(void)
 	if (ft_strlen("hello") == 7)
 		return (0);
 	else
+	{
+		__log_test("strlen hello", ft_itoa(strlen("hello")), ft_itoa(ft_strlen("hello")));
 		return (-1);
+	}
 }

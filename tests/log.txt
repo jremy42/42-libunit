@@ -1,0 +1,8 @@
+[0mTEST > [OK_Test] : 
+TEST > [KO_Test] : 
+
+ test : strlen hello  
+    attendu : [5]
+    retour : [5]  
+TEST > [SEG_Test] : 
+TEST > [BUS_Test] : 

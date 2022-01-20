@@ -15,6 +15,7 @@ NAME	= libunit.a
 FILES	= internal/launcher.c internal/loader.c\
 		pkg/lst_utils.c pkg/__putsr.c pkg/__putnbr.c\
 		std/get_stdout.c\
+		pkg/log.c\
 		pkg/__start.c
 
 # Paths
